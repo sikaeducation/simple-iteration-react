@@ -15,6 +15,11 @@ function App() {
   return (
     <div className="App">
       <ul className="FruitList">
+        {fruits.map(({ id, label }) => (
+          <li key={id}>
+            <FruitDisplay name={label} />
+          </li>
+        ))}
       </ul>
     </div>
   );
