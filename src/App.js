@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const fruits = [{
+    id: 1,
+    label: "Apple",
+  },{
+    id: 2,
+    label: "Banana",
+  },{
+    id: 3,
+    label: "Carrot",
+  }]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul className="FruitList">
+      </ul>
     </div>
   );
+}
+
+function FruitDisplay({ name }) {
+  return <p className="FruitDisplay">{name}</p>
 }
 
 export default App;
